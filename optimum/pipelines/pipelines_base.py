@@ -239,7 +239,7 @@ def load_ort_pipeline(
 ):
     if model_kwargs is None:
         model_kwargs = {}
-
+    model_id = None
     if model is None:
         model_id = SUPPORTED_TASKS[targeted_task]["default"]
         model = SUPPORTED_TASKS[targeted_task]["class"][0].from_pretrained(model_id, export=True)
