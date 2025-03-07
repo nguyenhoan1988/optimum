@@ -288,6 +288,7 @@ def pipeline(
     tokenizer: Optional[Union[str, PreTrainedTokenizer]] = None,
     feature_extractor: Optional[Union[str, PreTrainedFeatureExtractor]] = None,
     use_fast: bool = True,
+    device: Optional[Union[int, str, "torch.device"]] = None,
     token: Optional[Union[str, bool]] = None,
     accelerator: Optional[str] = "ort",
     revision: Optional[str] = None,
@@ -376,5 +377,6 @@ def pipeline(
         tokenizer=tokenizer,
         feature_extractor=feature_extractor,
         use_fast=use_fast,
+        device=device,
         **kwargs,
     )
